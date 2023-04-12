@@ -64,8 +64,8 @@ def show_custom_labels(model,bucket,photo, min_confidence):
 
 def main():
 
-    bucket='MY_BUCKET'
-    photo='MY_IMAGE_KEY'
+    bucket = 'arn:aws:s3:::acustic-pruebas'
+    photo='bueprue16'
     model='arn:aws:rekognition:us-east-1:662806665570:project/Acustico/version/Acustico.2023-03-31T13.38.04/1680287884921'
     min_confidence=95
 
