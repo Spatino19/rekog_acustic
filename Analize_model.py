@@ -58,16 +58,16 @@ def show_custom_labels(model,bucket,photo, min_confidence):
         ProjectVersionArn=model)
 
     # For object detection use case, uncomment below code to display image.
-    # display_image(bucket,photo,response)
+    display_image(bucket,photo,response)
 
     return len(response['CustomLabels'])
 
 def main():
 
     bucket = 'acustic-pruebas'
-    photo='bueprue12.jpg'
+    photo = 'malpru17.jpg'
     model='arn:aws:rekognition:us-east-1:662806665570:project/Acustico/version/Acustico.2023-03-31T13.38.04/1680287884921'
-    min_confidence=95
+    min_confidence=50
 
     label_count=show_custom_labels(model,bucket,photo, min_confidence)
     print("Custom labels detected: " + str(label_count))
