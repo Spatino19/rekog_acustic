@@ -50,7 +50,7 @@ def display_image(bucket,photo,response):
     image.show()
 
 def show_custom_labels(model,bucket,photo, min_confidence):
-    client=boto3.client('rekognition')
+    client = boto3.client('rekognition', region_name='us-east-1')
 
     #Call DetectCustomLabels
     response = client.detect_custom_labels(Image={'S3Object': {'Bucket': bucket, 'Name': photo}},
