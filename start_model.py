@@ -2,7 +2,7 @@ import boto3
 
 def start_model(project_arn, model_arn, version_name, min_inference_units):
 
-    client = boto3.client('rekognition', region_name='us-east-1')
+    client = boto3.client('rekognition')
 
     try:
         # Start the model
